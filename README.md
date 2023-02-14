@@ -1,4 +1,4 @@
-# About
+# DynVarMap
 DynVarMap is zero dependency easy and straight forward way to manage attribute-like runtime variables for Java.
 
 # How To
