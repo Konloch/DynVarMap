@@ -27,27 +27,27 @@ boolean booleanValue = map.getBoolean("githubBoolExample", false);
 ```
 To access the DynVar portion of the variable, you need to call upon the `get*Var` function. This exposes the API to allow method chaining on the variable.
 ```java
-boolean booleanValue = map.getBooleanVar("githubBoolExample", false).get();
+boolean booleanValue = map.getVarBoolean("githubBoolExample", false).get();
 ```
 
 #### Method chainning
 To fully leverage DynVar the trick is to chain methods to create easy-to-read one liners.
 ```java
 //create a new variable if it doesn't exist yet and check if it's been set to true, if it has execute the code below
-if(map.getBooleanVar("githubBoolExample").get())
+if(map.getVarBoolean("githubBoolExample").get())
 ```
 ```java
 //create a new variable if it doesn't exist yet, check if it's been set as true, if it hasn't execute the code below, either way set it to being set as true
-if(!map.getBooleanVar("githubBoolExample").getAndSet(true))
+if(!map.getVarBoolean("githubBoolExample").getThenSet(true))
 ```
 ```java
 //create a new variable if it doesn't exist yet, add one, check if it equals any of the numbers, if it does execute the code below
-if(map.getIntVar("githubIntExample").add(1).equalsAny(13, 21, 34, 55, 89))
+if(map.getVarInt("githubIntExample").add(1).equals(13, 21, 34, 55, 89))
 ```
 
 #### Time & Custom Types
 DynVar supports custom types, one built-in example common is system time interaction. The Time type is based on the Long type, this means it comes with all of the helper functions such as add, subtract, divide and multiply.
 ```java
 map.getTime("githubTimeExample").setNow(); //set the stop-watch to start counting now
-if(map.getTimeVar("githubTimeExample").hasPassed(30_000)) //return true if 30 seconds have passed
+if(map.getVarTime("githubTimeExample").hasPassed(30_000)) //return true if 30 seconds have passed
 ```
