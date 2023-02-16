@@ -1,7 +1,17 @@
 # DynVarMap
 DynVarMap is zero dependency easy and straight forward way to manage attribute-like runtime variables for Java.
 
-## How To
+## How To Add As Library
+Add it as a maven dependency or just [download the latest release](https://github.com/Konloch/DynVarMap/releases).
+```xml
+<dependency>
+  <groupId>com.konloch</groupId>
+  <artifactId>DynVarMap</artifactId>
+  <version>1.0.0</version>
+</dependency>
+```
+
+## How To Use
 #### Creating a new instance
 To create a new instance all you need to do is create a new VarMap object.
 ```java
