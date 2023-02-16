@@ -1,19 +1,11 @@
 # DynVarMap
 DynVarMap is zero dependency easy and straight forward way to manage attribute-like runtime variables for Java.
 
-# How To
+## How To
 #### Creating a new instance
 To create a new instance all you need to do is create a new VarMap object.
 ```java
 VarMap map = new VarMap();
-```
-
-#### Serializing/saving & loading from disk
-You can serialize the map using the built-in serializer, it uses it's own format similar to .ini.
-Deserializing supports .ini format as well if you perfer to have hand-written configurations.
-```java
-new VarMapSerializer("map.ini", map, true).save();
-new VarMapSerializer("map.ini", map, true).load();
 ```
 
 #### Creating & accessing new variables
@@ -50,4 +42,12 @@ DynVar supports custom types, one built-in example common is system time interac
 ```java
 map.getTime("githubTimeExample").setNow(); //set the stop-watch to start counting now
 if(map.getVarTime("githubTimeExample").hasPassed(30_000)) //return true if 30 seconds have passed
+```
+
+#### Serializing/saving & loading from disk
+You can serialize the map using the built-in serializer, it uses it's own format similar to .ini.
+Deserializing supports .ini format as well if you perfer to have hand-written configurations.
+```java
+new VarMapSerializer("map.ini", map, true).save();
+new VarMapSerializer("map.ini", map, true).load();
 ```
