@@ -874,6 +874,6 @@ public class DynVarMap
      */
     public static void main(String[] args)
     {
-        throw new RuntimeException("Incorrect usage");
+	    throw new RuntimeException("Incorrect usage - for information on how to use this correctly visit https://konloch.com/DynVarMap/");
     }
 }
