@@ -11,6 +11,11 @@ Add it as a maven dependency or just [download the latest release](https://githu
 </dependency>
 ```
 
+## Links
+* [Website](https://konloch.com/DynVarMap/)
+* [Discord Server](https://discord.gg/aexsYpfMEf)
+* [Download Releases](https://konloch.com/DynVarMap/releases)
+
 ## How To Use
 #### Creating a new instance
 To create a new instance all you need to do is create a new VarMap object.
