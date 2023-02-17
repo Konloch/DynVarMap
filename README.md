@@ -27,13 +27,13 @@ To supply a default value you can do it while grabbing the value.
 ```java
 boolean booleanValue = map.getBoolean("githubBoolExample", false);
 ```
-To access the DynVar portion of the variable, you need to call upon the `get*Var` function. This exposes the API to allow method chaining on the variable.
+To access the DynVarMap field, you need to call upon the `getVar*` function. This exposes the API to allow method chaining on the variable.
 ```java
 boolean booleanValue = map.getVarBoolean("githubBoolExample", false).get();
 ```
 
 #### Method chainning
-To fully leverage DynVar the trick is to chain methods to create easy-to-read one liners.
+To fully leverage DynVarMap the trick is to chain methods to create easy-to-read one liners.
 ```java
 //create a new variable if it doesn't exist yet and check if it's been set to true, if it has execute the code below
 if(map.getVarBoolean("githubBoolExample").get())
@@ -48,7 +48,7 @@ if(map.getVarInt("githubIntExample").add(1).equals(13, 21, 34, 55, 89))
 ```
 
 #### Time & Custom Types
-DynVar supports custom types, one built-in example common is system time interaction. The Time type is based on the Long type, this means it comes with all of the helper functions such as add, subtract, divide and multiply.
+DynVarMap supports custom types, one built-in example common is system time interaction. The Time type is based on the Long type, this means it comes with all of the helper functions such as add, subtract, divide and multiply.
 ```java
 map.getTime("githubTimeExample").setNow(); //set the stop-watch to start counting now
 if(map.getVarTime("githubTimeExample").hasPassed(30_000)) //return true if 30 seconds have passed
