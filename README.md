@@ -24,7 +24,7 @@ VarMap map = new VarMap();
 ```
 
 #### Creating & accessing new variables
-To create a new variable all you need to do is define the type first, then enter the unique variable name you would like to label it.
+To create a new variable all you need to do is define the type first, then enter the unique variable name you would like to use.
 ```java
 boolean booleanValue = map.getBoolean("githubBoolExample");
 ```
